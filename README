@@ -1,0 +1,43 @@
+Acme::Isn::t(3)       User Contributed Perl Documentation      Acme::Isn::t(3)
+
+
+
+NAME
+       Acme::Isn't - Determine whether your objects are NOT a certain class.
+
+SYNOPSIS
+           use Acme::Isn't;
+           use Some::OO::Module;
+           my $obj = Some::Other::OO::Module->new();
+           die EDOOFUS if $obj->isn't('Some::OO::Module');
+
+DESCRIPTION
+       This module allows a programmer to determine conclusively whether their
+       objects are not of a certain type. This sort of test can be useful to
+       e.g. programmatically enforce inheritance hierarchies. This allows for
+       much cleaner code than using unless and isa.
+
+USAGE
+       "Acme::Isn't" is a bit magical. You can use the "isn't" method on any
+       object you create, and just pass it a class name that you want to
+       ensure that your object is not. "isn't" returns 1 if true, 0 if false.
+
+ACKNOWLEDGEMENTS
+       This module was almost wholly inspired by Damian Conway's Acme::Don't
+       module.
+
+AUTHOR
+       Christopher Nehren, <apeiron@cpan.org>
+
+COPYRIGHT AND LICENSE
+       Copyright (C) 2007 by Christopher Nehren
+
+       The author hereby releases this library into the public domain.
+
+       The author hereby disclaims all responsibility for any usage of this
+       library in any code whatsoever. If you're silly enough to use this
+       code, you deserve whatever you get. :-)
+
+
+
+perl v5.8.8                       2007-08-10                   Acme::Isn::t(3)
